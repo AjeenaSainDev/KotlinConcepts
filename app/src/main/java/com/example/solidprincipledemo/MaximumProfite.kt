@@ -48,6 +48,13 @@ object MaximumProfite {
         fun String.getStringLenght() :Int{
             return (this.length)
         }
+
+        fun String.getNumberofChat():String{
+            return (this.replace("\\s", "",false))
+        }
+        val stringlenght = "Ajeena is good girl".replace(" ","").length
+        println("stringlenght$stringlenght")
+
         val leng = "akhil".getStringLenght()
         println("akhil$leng")
 
