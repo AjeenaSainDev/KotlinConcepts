@@ -2,14 +2,20 @@ package com.example.solidprincipledemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.android.exoplayer2.ui.PlayerView
+import android.widget.Button
+import android.widget.TextView
 
-open class MainActivity(val name :Int): AppCompatActivity() {
-     private lateinit var   playerview: PlayerView
 
+open class MainActivity: BaseActivity() {
+    private lateinit var button_main:Button
      override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        playerview= findViewById(R.id.playerview);
+         button_main = findViewById(R.id.button_main)
+         findViewById<TextView>(R.id.main_text).text = "main"
+         button_main.setOnClickListener {
+             super.startSpecificActivity(FirstActivity::class.java)
+         }
+        //playerview= findViewById(R.id.playerview);
     }
 }

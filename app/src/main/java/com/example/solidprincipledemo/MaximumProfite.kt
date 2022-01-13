@@ -4,6 +4,7 @@ package com.example.solidprincipledemo
 object MaximumProfite {
     @JvmStatic
     fun main(args: Array<String>) {
+       println("Ajeena".getAscii())
         /*val saving = 250
         val current = intArrayOf(175, 13, 109, 210, 97)
         val future = intArrayOf(200, 125, 128, 228, 133)
@@ -15,7 +16,7 @@ object MaximumProfite {
         val n = current.size
         val prof = maxProfit(current, future, n, saving)
         println(prof)*/
-        val lambda2 = { println("Hello, world") }
+      /*  val lambda2 = { println("Hello, world") }
         val sum :(Int,Int)->Int = {a:Int,b:Int->a+b}
         lambda2()
         val result = sum(2,3)
@@ -49,6 +50,15 @@ object MaximumProfite {
             return (this.length)
         }
 
+
+        fun String.getAscii() :Int{
+            var ascii = 0;
+            for(i in 0..this.length){
+                ascii = ascii+this.get(i).toInt()
+                println("ascii$ascii")
+            }
+            return ascii
+        }
         fun String.getNumberofChat():String{
             return (this.replace("\\s", "",false))
         }
@@ -76,12 +86,12 @@ object MaximumProfite {
           print("disaaaa"+a.operate(5,5)+"\n")
       }
        Display(B())
-       /* val web_dev = WebDev("Sona",33,75000)
+       *//* val web_dev = WebDev("Sona",33,75000)
         web_dev.webDevelop()
         val ios = IosDev("priya",33,50000)
         ios.iosDev()
         val androiddDev = AndroiddDev("Aju",31,80000)
-        androiddDev.androidDevelop()*/
+        androiddDev.androidDevelop()*//*
 
         fun AB?.output(){
             if(this == null){
@@ -114,7 +124,15 @@ object MaximumProfite {
             is Mysealed.College ->{
                 println(data)
             }
+        }*/
+    }
+    fun String.getAscii() :Int{
+        var ascii = 0;
+        for(i in 0..this.length-1){
+            ascii = ascii+this.get(i).toInt()
+            println("ascii$ascii")
         }
+        return ascii
     }
 
     fun maxProfit(currentValue: IntArray, futureValue: IntArray, n: Int, saving: Int): Int {
